@@ -1,0 +1,64 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: kennyNoy98@gmail.com
+      changes:
+        - createTable:
+            tableName: Price
+            columns:
+              - column:
+                  name: id
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: brand_id
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: start_date
+                  type: DATETIME
+                  constraints:
+                    nullable: false
+              - column:
+                  name: end_date
+                  type: DATETIME
+                  constraints:
+                    nullable: false
+              - column:
+                  name: price_list
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: product_id
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: priority
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: price
+                  type: FLOAT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: CURR
+                  type: VARCHAR(3)
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: 2
+      author: kennynoy98@gmail.com
+      changes:
+        - sqlFile:
+            relativeToChangelogFile: false
+            comment: Inicializando datos
+            dbms: "h2"
+            endDelimiter: ;
+            splitStatements: true
+            path: InicializarDatos.sql
