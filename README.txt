@@ -16,11 +16,13 @@ El conocimiento de las test, permitio su implementacion antes del desarrollo del
 
 Luego de concluir el diseño e implementacion del RestController,conteniendo los endpoints necesarios, se procedio a la implementacion de la logica que los respalda. 
 
-Utilizado las drivedQuerys que brinda la libreria SpringJPA, se construyo una serie de consultas que satisfacian la recuperacion de datos de la base de datos. 
+Utilizado las drivedQuerys que brinda la libreria SpringJPA y el uso de querys nativas, se construyo una serie de consultas que satisfacian la recuperacion de datos de la base de datos. 
 
 Se encontro el uso de DTO interesantes ya que enfatizaban el hecho de devolver parte de la entidad en cuestion.
 
 En caso de que no se encientre un valor por que se entro mal un parametro, una simple validacion de HttpStatus.NOT_CONTENT se devolverá junto con la advertencia en texto de el error junto con una recomendacion.
+
+Por último mencionar que se hizo uso de la dependencia lombok y LiquidBase para la iniciacion de datos y facilitar la programacion de consultas y cambios de manera automatizada, de manera que cuando el servidor se levanta, se encarga de crear la tabla y llenarla con los datos entregados por el test.
 
 Espero haber cumplido con todo lo exigido por el Test, les pongo mi contacto por si se tiene alguna duda:
 
