@@ -3,10 +3,12 @@ package com.example.Javatest.Prices.Model;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
+import lombok.Data;
 import org.jetbrains.annotations.NotNull;
 
 import java.time.LocalDateTime;
 
+@Data
 @Entity
 public class Price {
     @Id
@@ -61,75 +63,4 @@ public class Price {
         this.curr = curr;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public int getBrandId() {
-        return brandId;
-    }
-
-    public void setBrandId(int brandId) {
-        this.brandId = brandId;
-    }
-
-    public @NotNull LocalDateTime getStartDate() {
-        return startDate;
-    }
-
-    public void setStartDate(@NotNull LocalDateTime startDate) {
-        this.startDate = startDate;
-    }
-
-    public @NotNull LocalDateTime getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(@NotNull LocalDateTime endDate) {
-        this.endDate = endDate;
-    }
-
-    public int getPriceList() {
-        return priceList;
-    }
-
-    public void setPriceList(int priceList) {
-        this.priceList = priceList;
-    }
-
-    public int getProductId() {
-        return productId;
-    }
-
-    public void setProductId(int productId) {
-        this.productId = productId;
-    }
-
-    public int getPriority() {
-        return priority;
-    }
-
-    public void setPriority(int priority) {
-        this.priority = priority;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public String getCurr() {
-        return curr;
-    }
-
-    public void setCurr(String curr) {
-        this.curr = curr;
-    }
 }

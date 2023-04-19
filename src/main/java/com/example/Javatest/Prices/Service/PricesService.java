@@ -19,7 +19,7 @@ public class PricesService {
 
     public Response getFinalPriceByStartDateProductIdBrandId(LocalDateTime givenDate, int productId, int brandId) {
 
-        List<Price> prices = pricesRepository.findByProductIdAndBrandIdAndStartDateLessThanAndEndDateGreaterThanOrderByPriorityDesc(productId, brandId, givenDate, givenDate);
+        List<Price> prices = pricesRepository.findByProductIdAndBrandIdAndStartDateLessThanAndEndDateGreaterThanOrderByPriorityDesc(productId, brandId, givenDate);
 
         PriceDTO pFinal;
         Response response = new Response();
